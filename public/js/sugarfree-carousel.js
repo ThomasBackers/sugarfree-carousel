@@ -26,10 +26,9 @@ class Carousel {
     }
 
     setNewNode(tagName, className, receiverNode) {
-        const newNode = document.createElement(`${tagName}`)
-        if (receiverNode.className) 
-            newNode.setAttribute('class', `${receiverNode.className}__${className}`)
-        else newNode.setAttribute('class', `${className}`)
+        const newNode = document.createElement(tagName)
+        if (!receiverNode.className) newNode.setAttribute('class', className)
+        else newNode.setAttribute('class', `${receiverNode.className}__${className}`)
         receiverNode.appendChild(newNode)
         return newNode
     }

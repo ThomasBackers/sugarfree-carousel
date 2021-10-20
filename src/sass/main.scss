@@ -1,0 +1,21 @@
+@import "base/reset";
+
+.parent-node {
+    &__carousel {
+        // because the content moves in relation to this tag 
+        position: relative;
+        overflow: hidden;
+        &__container {
+            display: flex;
+            // slidesAmount / slidesVisible * 100% 
+            width: 3 / 1 * 100%;
+            &__item {
+                // (100% / slidesVisible) / (slidesAmount / slidesVisible)
+                width: (100% * 1) / (3 / 1);
+                &__content {
+                    color: red;
+                }
+            }
+        }
+    }
+}

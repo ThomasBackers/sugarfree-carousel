@@ -1,7 +1,6 @@
 class Carousel {
     constructor(parentNode, options = {}) {
         this.parentNode = parentNode
-        this.content = [...parentNode.children]
         this.options = Object.assign({}, {
             // slides options
             slidesToScroll: 1,
